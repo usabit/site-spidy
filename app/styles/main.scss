@@ -20,6 +20,10 @@ body {
   font-family: 'Raleway', sans-serif;  
 }
 
+.container-fluid {
+  max-width: 1380px;
+}
+
 .btn,
 a {
   @include transition-property(all);
@@ -177,6 +181,85 @@ a {
         height: 105px;
       }
     }
+  }
+  @media screen and (min-width: 768px) {
+    h1 {
+      color: #2d4453;
+      font-size: 2.4em;
+      font-weight: 300;
+      line-height: 140%;
+      margin: 40px 0 40px 60px;
+      position: relative;
+
+      small {
+        width: 105px;
+        height: 87px;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 37px 0 0;
+        text-align: center;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        color: #ee4e30;
+        font-size: 0.5em;
+        font-weight: 700;
+        background: url(../images/carimbo.png) no-repeat center center;
+        @include rotate(25deg);
+      }
+    }
+
+    p {
+      color: #000;
+      margin: 20px 0 20px 60px;
+      line-height: 150%;
+      font-size: 1.5em;
+    }
+
+    .btn {
+      max-width: 220px;
+      white-space: initial;
+      margin: 20px 0 30px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      &.btn-primary {
+        background-color: #ecbe42;
+        color: #fff;
+        border-color: transparent;
+        box-shadow: inset 0 0 20px rgba(255,255,255,1);
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: darken(#ecbe42, 10%);
+        }
+      }
+
+      &.btn-link {
+        color: #079bac;
+        padding-left: 38px;
+        padding-right: 38px;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: darken(#079bac, 10%);
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 992px) {
+    background: url(../images/notebook.jpg) no-repeat 140% 50%;
+  }
+  @media screen and (min-width: 1040px) {
+    background-position: 130% 50%;
+  }
+  @media screen and (min-width: 1200px) {
+    background-position: 100% 50%;
+  }
+  @media screen and (min-width: 1380px) {
+    background-position: 85% 50%;
   }
 }
 

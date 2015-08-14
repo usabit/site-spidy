@@ -2,7 +2,10 @@ $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/fontawesome/scss/font-awesome.scss";
 // endbower
+@import "http://fonts.googleapis.com/css?family=Raleway:400,300,700";
+@import "http://fonts.googleapis.com/css?family=Architects+Daughter";
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -11,83 +14,494 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
+// DEFAULTS
+// ================================================================================================
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font-family: 'Raleway', sans-serif;  
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+.btn,
+a {
+  @include transition-property(all);
+  @include transition-duration(300ms);
+  @include transition-timing-function(ease-in-out);
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+.btn-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  z-index: 9999;
+  background-color: #eab72c;
+  border: 0;
+  color: #000;
+  font-size: 1.3em;
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken(#eab72c, 10%);
+  }
+}
+
+// HEADER
+// ================================================================================================
+.header-contact {
+  background: #3bb827;
+
+  a {
+    color: #fff;
+    font-size: 1.1em;
     line-height: 40px;
-    padding-bottom: 19px;
+
+    .fa {
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      opacity: .8;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background: #2d4453;
+
+    a {
+      font-size: 0.85em;
+      line-height: 34px;
+      .fa {
+        color: #07d061;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: inline;
+      list-style-type: none;
+
+      li {
+        margin: 0 0 0 15px;
+        padding: 0;
+        display: inline;
+      }
+    }
+  }
+}
+.header {
+  @media screen and (min-width: 768px) {
+    background: #f4f5f6;
+    height: 75px;
+
+    .header-title {
+      margin: 25px 0 0;
+      display: inline-block;
+
+      &:before {
+        content: "";
+        width: 50px;
+        height: 69px;
+        background: url(../images/marca-ninja.png) no-repeat;
+        display: block;
+        float: left;
+        margin-bottom: -10px;
+        margin-top: -15px;
+        margin-right: 15px;
+      }
+    }
+    .btn {
+      background-color: #eab72c;
+      border-color: transparent;
+      margin-top: 20px;
+      border-radius: 0;
+
+      &:hover,
+      &:active {
+        background-color: darken(#eab72c, 10%);
+      }
+    }
   }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+// HIGHLIGHT
+// ================================================================================================
+.highlight {
+  @media screen and (max-width: 767px) {
+    h1 {
+      background: #9e9ea2 url(../images/bg-highlight-mobile.jpg) no-repeat;
+      background-size: cover;
+      margin: 0 -15px;
+      font-size: 1em;
+      padding: 30px 15px;
+      position: relative;
+
+      span {
+        background-color: #eab72c;
+        display: block;
+        padding: 30px 20px;
+        color: #000;
+        font-size: 1.6em;
+        text-align: center;
+        line-height: 160%;
+      }
+
+      small {
+        display: block;
+        color: #ee4e30;
+        font-size: 1.6em;
+        font-weight: 700;
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+    }
+
+    p {
+      font-size: 1.6em;
+      line-height: 160%;
+      text-align: center;
+      margin: 90px 0 30px;
+
+      &:after {
+        font-size: 0.6em;
+        display: block;
+        content: "Veja como";
+        background: url(../images/rolar-tela.png) no-repeat center bottom;
+        width: 100%;
+        height: 105px;
+      }
+    }
+  }
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+
+// IMPORTANT
+// ================================================================================================
+.important {
+  @media screen and (max-width: 767px) {
+    h2 {
+      color: #ee4e30;
+      font-size: 1.6em;
+      font-weight: 700;
+      text-align: center;
+      padding: 0 10px;
+      line-height: 160%;
+    }
+    h3 {
+      color: #414141;
+      font-size: 1.6em;
+      margin-top: 50px;
+    }
+
+    p {
+      color: #414141;
+      font-size: 1.2em;
+      width: 70%;
+      margin-left: 20px;
+
+      & + p {
+        font-weight: 700;
+      }
+    }
+
+    .col-right-xs {
+      text-align: right;
+      margin-left: 0;
+
+      p {
+        float: right;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    background: #38727b;
+    padding: 30px 0;
+    text-align: center;
+
+    h2 {
+      font-size: 2.5em;
+      color: #fff;
+      line-height: 140%;
+
+      small {
+        color: #fff;
+        display: block;
+      }
+    }
+
+    h3 {
+      color: #fff;
+      font-family: 'Architects Daughter', cursive;
+      font-weight: 300;
+      font-size: 1.4em;
+      margin: 20px 0;
+    }
+
+    p {
+      color: #fff;
+      font-size: 1.14em;
+      line-height: 140%;
+      margin: 0 5px 10px;
+      font-weight: 300;
+    }
+  }
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
+
+// INVESTIMENT
+// ================================================================================================
+.investiment {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+
+  .col-price {
+    background-color: #c19c37;
+    height: 550px;
+
+    .price-bottom {
+      background: #fff;
+      width: 220px;
+      height: 220px;
+      border-radius: 110px;
+      margin: 0 auto 20px;
+      overflow: hidden;
+
+      p {
+        color: #c19c37;
+      }
+
+      .plan-name {
+        text-transform: uppercase;
+        font-size: 0.8em;
+        margin: 50px 0 -15px;
+      }
+
+      .price-currency {
+        font-size: 2em;
+        margin-right: 5px;
+      }
+      .price-value {
+        font-size: 5em;
+      }
+      .price-recurrence {
+        font-size: 1.14em;
+        text-align: right;
+        display: block;
+        margin: -10px 20px 0 0;
+      }
+
+      & + p {
+        font-size: 1.35em;
+        line-height: 160%;
+        margin: 0 auto 15px;
+        max-width: 380px;
+        color: #fff;
+        font-weight: 300;
+
+        @media screen and (max-width: 1199px) {
+          font-size: 1.2em;
+        }
+
+        strong {
+          font-weight: 400;
+        }
+      }
+    }
+    .btn {
+      background-color: #00ddff;
+      border-color: transparent;
+      border-radius: 0;
+      color: #314756;
+      font-size: 1.4em;
+      padding: 15px 25px;
+      margin: 0 0 15px;
+
+      &:hover,
+      &:active {
+        background-color: darken(#00ddff, 10%);
+      }
+    }
+  }
+  .col-software {
+    background-color: #ac9a68;
+    height: 550px;
+
+    p {
+      font-size: 1.35em;
+      line-height: 160%;
+      margin: 0 10% 20px;
+      color: #fff;
+      font-weight: 300;
+
+      @media screen and (max-width: 1199px) {
+        font-size: 1.2em;
+        margin: 0 5% 20px;
+      }
+
+      a {
+        color: #fff;
+        position: relative;
+
+        .fa {
+          position: absolute;
+          left: -15px;
+          top: 2px;
+        }
+      }
+    }
+    ul {
+      list-style-type: none;
+      text-align: center;
+      margin: 45px 0 35px;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin: 0 3%;
+
+        @media screen and (max-width: 990px) {
+          width: 25%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: 3em;
+    color: #fff;
+    margin: 40px 0 30px;
+
+    @media screen and (max-width: 1199px) {
+      font-size: 2.5em;
+    }
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
+// WHO USES
+// ================================================================================================
+.who-uses {
+  text-align: center;
+
+  h2 {
+    font-size: 3em;
+    color: #2d4453;
+    margin: 40px 0;
+  }
+
+  p {
+    max-width: 346px;
+    margin: 25px auto;
+    color: #2d4453;
+    font-size: 1.3em;
+    line-height: 160%;
+  }
+
+  img {
+    max-width: 100%;
   }
 }
+
+// OPERATING AREA
+// ================================================================================================
+.operating-area {
+  padding: 50px 0 20px;
+
+  form {
+    border: 2px dashed #ee4e30;
+    border-radius: 100px;
+    padding: 25px 20px;
+    margin: 0;
+    text-align: center; 
+
+    h2 {
+      margin: 10px 0;
+      font-size: 1.8em;
+      color: #2d4453;
+      display: inline-block;
+      vertical-align: middle;
+      
+
+      .fa {
+        color: #ee4e30;
+        margin-left: 15px;
+        float: right;
+        font-size: 1.5em;
+        margin-top: -8px;
+      }
+    }
+    .form-control {
+      background-color: #d9e5df;
+      border-color: #39393b;
+      border-radius: 0;
+      margin-left: 15px;
+      max-width: 300px;
+      display: inline-block;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin: 0 10%;
+    }
+  }
+}
+
+
+// CALL TO
+// ================================================================================================
+.call-to {
+  padding: 50px 0;
+
+  img {
+    max-width: 100%;
+    margin: 0 0 50px;
+  }
+
+  .btn {
+    border-radius: 0;
+    padding: 30px 0px;
+    width: 100%;
+    background-color: #05a0ff;
+    font-weight: 300;
+
+    @media screen and (min-width: 768px) {
+      padding: 30px 40px;
+    }
+
+    &:hover,
+    &:active {
+      background-color: darken(#05a0ff, 10%);
+    }
+  }
+}
+
+
+// FOOTER
+// ================================================================================================
+.footer {
+  @media screen and (min-width: 768px) {
+    background: url(../images/footer-ninja.png) no-repeat center top;
+    padding: 150px 0 20px;
+  }
+
+  margin-top: 15px;
+  padding-bottom: 40px;
+
+  p {
+    font-size: 0.78em;
+    color: #373737;
+  }
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
 }

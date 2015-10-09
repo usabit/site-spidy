@@ -66,10 +66,10 @@
                             <i class="fa fa-check-circle-o is-video-ended"></i>
                             <a class="btn btn-primary popup-trial is-video-not-ended" href="#popupTrial">Assistir agora</a>
                         </li>
-                        <!--<li>
+                        <li>
                             <span class="next-step-content">Curtir nossa página no Facebook</span>
                             <div class="fb-like"></div>
-                        </li>-->
+                        </li>
                         <li>
                             <span class="next-step-content">Cadastrar e começar seus 15 dias grátis</span>
                             <a class="btn btn-primary is-video-ended" href="http://app.spidy.ninja/#/cadastro">Cadastrar</a>
@@ -100,8 +100,17 @@
     <!-- Modal experimente -->
     <div id="popupTrial" class="zoom-anim-dialog mfp-hide">
         <div id="playerTrial"></div>
-        <a class="btn btn-primary btn-lg" href="proximos-passos/">Experimentar</a>
+        <a class="btn btn-primary btn-lg" href="http://app.spidy.ninja/#/cadastro">Experimentar</a>
     </div>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5&appId=955904217809731";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

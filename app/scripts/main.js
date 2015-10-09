@@ -91,6 +91,32 @@ $(function() {
 			console.log('2');
 			localStorage.setItem('IsFaq', 'true');
 		});
+
+		$('form[name=occupationArea]').submit(function(e) {
+			var _this = $(this);
+			var formData = {
+				MessageType: 1,
+				Body: _this.find('#occupation').val()
+			};
+
+			console.log(formData);
+
+			$.ajax({
+				type: 'POST',
+				url: 'http://dev.spidy.ninja/api/Message',
+				data: formData,
+				dataType: 'json',
+				encode: true
+			}).done(function(result) {
+				console.log('Result of occupationArea form submit: ', result);
+
+				$('#occupation').fadeOut(100, function() {
+					$('#occupationArea').append('<span class="occupation-feedback"><i class="fa fa-fw fa-lg fa-check-circle"></i> Enviado, obrigado!</span>')
+				});
+			});
+
+			e.preventDefault();
+		});
 	}
 
 

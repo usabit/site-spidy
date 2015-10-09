@@ -714,6 +714,13 @@ a {
       display: inline-block;
     }
 
+    .occupation-feedback {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 1.2em;
+      color: #12825C;
+    }
+
     @media screen and (min-width: 1200px) {
       margin: 0 10%;
     }

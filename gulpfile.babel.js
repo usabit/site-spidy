@@ -38,7 +38,20 @@ const testLintOptions = {
   }
 };
 
-gulp.task('lint', lint('app/scripts/**/*.js'));
+const lintOptions = {
+  rules: {
+      'strict': 2
+  },
+  globals: {
+      'jQuery':false,
+      '$':true
+  },
+  envs: [
+      'browser'
+  ]
+};
+
+gulp.task('lint', lint('app/scripts/**/*.js', lintOptions));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['styles'], () => {

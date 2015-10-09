@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>site spidy</title>
+    <title>Página inicial - Spidy.Ninja</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css styles/vendor.css -->
@@ -13,14 +13,15 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/bower_components/magnific-popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 </head>
 
-<body>
+<body class="pg-home">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -28,13 +29,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                    <a class="hidden-xs" href="tel:552141012259"><i class="fa fa-lg fa-phone-square"></i> +55 21 4101-2259</a>
+                    <a class="hidden-xs" href="tel:552141012259"><i class="fa fa-lg fa-phone-square"></i> +55 21 4101-2259 - Fale com um especialista!</a>
                     <a class="visible-xs-inline" href="tel:552141012259"><i class="fa fa-lg fa-whatsapp"></i> +55 21 4101-2259</a>
                 </div>
                 <div class="hidden-xs col-sm-6 text-right">
                     <ul>
-                        <li><a href="suporte.html">Suporte</a></li>
-                        <li><a href="login.html">Login</a></li>
+                        <li><a href="/suporte/">Suporte</a></li>
+                        <li><a href="http://app.spidy.ninja/">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,7 +45,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
-                    <a class="header-title" href="index.html"><img src="images/marca-spidy.png" alt="Spidy.Ninja"></a>
+                    <a class="header-title" href="/"><img src="/images/marca-spidy.png" alt="Spidy.Ninja"></a>
                 </div>
                 <div class="col-sm-6 text-right">
                     <a class="btn btn-primary" href="http://app.spidy.ninja/#/cadastro">15 dias grátis!</a>
@@ -58,7 +59,7 @@
                 <div class="col-xs-12 col-md-8 col-lg-7">
                     <h1><span>Você ainda perder horas cadastrando produtos no Comprasnet?</span> <small>Isso acabou.</small></h1>
                     <p>A partir de agora, você vai cadastrar <b>centenas</b> de produtos em poucos minutos, de um jeito muito mais prático.</p>
-                    <p class="hidden-xs"><a class="btn btn-primary" href="http://app.spidy.ninja/#/cadastro">Experimente agora gratuitamente</a> <a class="btn btn-link" href="#">Leia mais e veja como é simples</a></p>
+                    <p class="hidden-xs"><a class="btn btn-primary popup-trial" href="#popupTrial">Experimente agora <b>gratuitamente</b></a> <!--<a class="btn btn-link" href="#">Leia mais e veja como é simples</a>--></p>
                 </div>
             </div>
         </div>
@@ -70,50 +71,73 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
-                    <h2>Conheça o novo programa que vai te ajudar nessa tarefa tão chata. <small class="hidden-xs">Com o Spidy, você vai gastar seu tempo com coisas mais importantes.</small></h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <h3>1. Tempo é Dinheiro.</h3>
-                    <p class="visible-xs-block">Você gasta horas cadastrando produtos, conferindo item por item, copiando e colando informações de um jeito chato e incômodo?</p>
-                    <p>O Spidy é um software que organiza todos os produtos de uma vez para você fazer edições em lote.</p> 
-                </div>
-                <div class="col-xs-12 col-sm-4 col-right-xs">
-                    <h3>2. Facilidade extrema.</h3>
-                    <p class="visible-xs-block">O Spidy é simples por que foi pensado para facilitar sua vida.</p>
-                    <p>Todos os produtos são listados numa planilha e um tutorial interativo te ajuda a editar tudo passo a passo.</p> 
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <h3>3. O Spidy grava tudo.</h3>
-                    <p class="visible-xs-block">Se acontecer um imprevisto, tudo que você estava fazendo fica registrado para continuar depois.</p>
-                    <p>Chega de erros, sessão expirada e aquela paginação chata que te faz perder horas.</p> 
+                    <h2>Chega de trabalho chato. <small class="hidden-xs">Com o Spidy, você vai gastar seu tempo com coisas mais importantes.</small></h2>
                 </div>
             </div>
         </div>
     </div>
+    <div class="important-things">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="thing-item thing-01">
+                        <h3>Muita velocidade</h3>
+                        <p>Cadastre itens de forma mais eficiente.</p> 
+                    </div>
+                    <div class="thing-item thing-02">
+                        <h3>Fácil de usar</h3>
+                        <p>O Spidy foi feito pensando para ser fácil para você.</p> 
+                    </div>
+                    <div class="thing-item thing-03">
+                        <h3>Menos chances de errar</h3>
+                        <p>Trabalho repetitivo agora é coisa do passado.</p> 
+                    </div>
+                    <div class="thing-item thing-04">
+                        <h3>Tudo fica gravado</h3>
+                        <p>Você sempre pode continuar de onde parou.</p> 
+                    </div>
+                    <div class="thing-item thing-05">
+                        <h3>Controle total</h3>
+                        <p>Absolutamente todos os seus produtos ficam registrados.</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="webapp">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-8">
+                    <h2>Não precisa<br class="hidden-xs"> instalar no computador.</h2>
+                    <p>Leve o Spidy com você, pois ele funciona via internet, direto do navegador. Você pode acessar de qualquer lugar, a qualquer momento.</p>
+                    <p>
+                        <a class="btn-is-faq" href="/suporte/"><i class="fa fa-angle-right"></i> Tire suas dúvidas sobre o Spidy</a>
+                        <a href="/suporte/"><i class="fa fa-angle-right"></i> Veja isso tudo funcionando</a>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <ul>
+                        <li><img class="img-circle" src="images/mobility-01.jpg" alt="No seu celular"></li>
+                        <li><img class="img-circle" src="images/mobility-02.jpg" alt="No seu tablet"></li>
+                    </ul>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="investiment hidden-xs">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-5 col-md-4 col-price">
+                <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-price">
                     <h2>Um preço só.</h2>
                     <div class="price-bottom">
                         <p class="plan-name">Plano exclusivo</p>
                         <p><small class="price-currency">R$</small><span class="price-value">699</span><small class="price-recurrence">/mes</small></p>
                     </div>
                     <p>No plano promocional de lançamento, você tem acesso ao Spidy completo, sem restrições. <strong>E começa com 15 dias grátis!</strong></p>
-                    <p><a class="btn btn-info" href="http://app.spidy.ninja/#/cadastro">Comece a usar!</a></p>
-                </div>
-                <div class="col-sm-7 col-md-8 col-software">
-                    <h2>Não precisa instalar no computador.</h2>
-                    <p>Leve o Spidy com você, pois ele funciona via internet, direto do navegador. Você pode acessar de qualquer lugar, a qualquer momento.</p>
-                    <ul>
-                        <li><img class="img-circle" src="images/mobility-01.jpg" alt="No seu celular"></li>
-                        <li><img class="img-circle" src="images/mobility-02.jpg" alt="No seu tablet"></li>
-                        <li><img class="img-circle" src="images/mobility-03.jpg" alt="No seu notebook"></li>
-                    </ul>
-                    <p><a href="#"><i class="fa fa-angle-right"></i> Tire suas dúvidas sobre o Spidy</a></p>
-                    <p><a href="#"><i class="fa fa-angle-right"></i> Veja isso tudo funcionando</a></p>
+                    <p><a class="btn btn-info popup-trial" href="#popupTrial">Comece a usar!</a></p>
                 </div>
             </div>
         </div>
@@ -160,7 +184,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <a class="btn btn-lg btn-info" href="http://app.spidy.ninja/#/cadastro">Comece seus 15 dias grátis agora</a>
+                    <a class="btn btn-lg btn-info popup-trial" href="#popupTrial">Comece seus 15 dias grátis agora</a>
                 </div>
             </div>
         </div>
@@ -169,10 +193,17 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 text-center">
+                    <a href="#" class="back-to-top" id="toTop">Voltar para o topo</a>
                     <p>spidy.ninja 2015 - Todos os Direitos Reservados.</p>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Modal experimente -->
+    <div id="popupTrial" class="zoom-anim-dialog mfp-hide">
+        <div id="playerTrial"></div>
+        <a class="btn btn-primary btn-lg" href="proximos-passos/">Experimentar</a>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -210,9 +241,10 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="/scripts/main.js"></script>
     <!-- endbuild -->
 </body>
 
